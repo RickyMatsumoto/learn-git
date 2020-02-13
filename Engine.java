@@ -54,11 +54,17 @@ public class Engine {
   public void playerTurn(int player, int row, int col) {
     return;
   }
-
-  // TODO: Complete this method
+  
   // Return true if the board is full
   // Return false if not
-  public boolean checkTie() {
+  public boolean checkTie(){
+    for(int i = 0; i < BOARD_SIZE; i++){
+      for(int j = 0; j < BOARD_SIZE; j++){
+        if(board[i][j].equals(" ")){
+          return false;
+        }
+      }
+    }
     return true;
   }
 
